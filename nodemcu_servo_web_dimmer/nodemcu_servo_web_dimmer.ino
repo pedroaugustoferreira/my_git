@@ -13,8 +13,8 @@ Servo myservo;  // create servo object to control a servo
 static const int servoPin = 2;
 
 // Replace with your network credentials
-const char* ssid     = "Service CWB";
-const char* password = "Jakarosa2017";
+const char* ssid     = "VIVO-66F9";
+const char* password = "C9D3C866F9";
 
 // Set web server port number to 80
 WiFiServer server(80);
@@ -83,7 +83,7 @@ void loop(){
             // Web Page
             client.println("</head><body><h1>ESP32 with Servo</h1>");
             client.println("<p>Position: <span id=\"servoPos\"></span></p>");          
-            client.println("<input type=\"range\" min=\"0\" max=\"153\" class=\"slider\" id=\"servoSlider\" onchange=\"servo(this.value)\" value=\""+valueString+"\"/>");
+            client.println("<input type=\"range\" min=\"0\" max=\"360\" class=\"slider\" id=\"servoSlider\" onchange=\"servo(this.value)\" value=\""+valueString+"\"/>");
             
             client.println("<script>var slider = document.getElementById(\"servoSlider\");");
             client.println("var servoP = document.getElementById(\"servoPos\"); servoP.innerHTML = slider.value;");
